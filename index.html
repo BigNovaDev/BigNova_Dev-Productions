@@ -184,6 +184,29 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+    .game-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #fff2;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 16px #ffd96555;
+}
+
+.game-card a {
+  text-decoration: none;
+  color: #ffd965;
+  font-weight: bold;
+  font-size: 18px;
+}
   </style>
 </head>
 <body oncontextmenu="return false">
