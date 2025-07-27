@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="https://i.imgur.com/e4oXN9E.png" type="image/png">
+  <meta name="description" content="BigNova_Dev Productions - Game development, projects, and cosmic experiences." />
   <title>BigNova_Dev Productions</title>
-  <meta name="description" content="BigNova_Dev Productions - Cosmic-themed games, apps, and experiences crafted by a creative team.">
+  <link rel="icon" href="your-logo.png" type="image/png" />
   <style>
-    /* === Base Reset === */
+    /* === Reset & Base === */
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +20,36 @@ body {
   color: #f0f0f0;
   user-select: none;
   overflow-x: hidden;
+}
+
+/* === Splash Screen === */
+.splash-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: linear-gradient(135deg, #0e0f3b, #22276c);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 2.5s ease-in-out forwards;
+}
+
+.splash-logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #7db4ff;
+  animation: popIn 1s ease;
+}
+
+.splash-title {
+  margin-top: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px #ffd965;
+  animation: popIn 1.6s ease;
 }
 
 /* === Navbar === */
@@ -72,7 +102,7 @@ body {
   color: #fff;
 }
 
-/* === Section Styling === */
+/* === Section Layout === */
 .section {
   padding: 80px 20px;
   text-align: center;
@@ -94,7 +124,39 @@ body {
   line-height: 1.8;
 }
 
-/* === Project Grid === */
+/* === Game Cards === */
+.games-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.game-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #fff2;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 16px #ffd96555;
+}
+
+.game-card a {
+  text-decoration: none;
+  color: #ffd965;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* === Projects === */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -116,7 +178,6 @@ body {
   transform: scale(1.05);
 }
 
-/* === Card Links === */
 .exotic-link {
   background: rgba(255, 255, 255, 0.07);
   color: #def2ff;
@@ -134,7 +195,7 @@ body {
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
 }
 
-/* === Discord Button === */
+/* === Discord === */
 .discord-link {
   display: inline-block;
   background: linear-gradient(135deg, #22263a, #534fd9);
@@ -150,7 +211,6 @@ body {
 
 .discord-link:hover {
   background: #705bff;
-  color: #fff;
 }
 
 /* === Footer === */
@@ -173,145 +233,124 @@ footer {
   100% { opacity: 1; transform: translateY(0); }
 }
 
-/* === Responsive Fixes === */
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; visibility: visible; }
+  80% { opacity: 0; visibility: hidden; }
+  100% { display: none; }
+}
+
+/* === Responsive === */
 @media (max-width: 600px) {
   .nav-links {
     flex-direction: column;
     gap: 10px;
   }
 
-  .project-grid {
+  .project-grid,
+  .games-section {
     grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
   }
-}
-    .game-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #fff2;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 280px;
-  text-align: center;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.game-card:hover {
-  transform: scale(1.05);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 16px #ffd96555;
-}
-
-.game-card a {
-  text-decoration: none;
-  color: #ffd965;
-  font-weight: bold;
-  font-size: 18px;
 }
   </style>
 </head>
-<body oncontextmenu="return false">
+<body>
+
+  <!-- Splash Screen -->
+  <div class="splash-screen">
+    <img src="your-logo.png" alt="BigNova_Dev Logo" class="splash-logo" />
+    <h1 class="splash-title">BigNova_Dev Productions</h1>
+  </div>
+
+  <!-- Navbar -->
   <header class="navbar">
-    <div class="logo-text">
-      <img src="https://i.imgur.com/e4oXN9E.png" alt="BigNova_Dev Logo" class="logo" />
-    </div>
+    <img src="your-logo.png" alt="BigNova_Dev Logo" class="logo" />
+    <h1 class="navbar-title">BigNova_Dev Productions</h1>
     <nav>
       <ul class="nav-links">
-        <h1 class="navbar-title">BigNova_Dev Productions</h1>
         <li><a href="#games">Games</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#community">Community</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
-  
+
+  <!-- Games Section -->
   <section id="games" class="section">
     <h2>Games</h2>
+    <div class="games-section">
+      <div class="game-card">
+        <div>🎮</div>
+        <a href="rock-paper-scissors.html">Rock Paper Scissors</a>
+      </div>
+      <div class="game-card">
+        <div>🧠</div>
+        <a href="infinite-wordle.html">Infinite Wordle</a>
+      </div>
+      <!-- Add more games as needed -->
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
     <ul class="project-grid">
-      <li>
-        <a href="https://bignovadev.github.io/Rock-Paper-Scissors/" target="_blank" class="exotic-link">
-          📄 Rock Paper Scissors ✂️️<br>
-          <img class="Thumbnail" src="https://i.imgur.com/vjemEAl.png" alt="Thumbnail">
+      <li class="project-item">
+        <a href="project-one.html" class="exotic-link">
+          <img src="project-thumb1.png" alt="Project 1" class="Thumbnail" />
+          <p>Project One</p>
         </a>
       </li>
-      <li>
-        <a href="https://bignovadev.github.io/Infinite-Wordle/" target="_blank" class="exotic-link">
-          ♾️ Infinite Wordle 🔠
-          <br>
-          <img class="Thumbnail" src="https://i.imgur.com/iPPi92C.png" alt="Thumbnail">
-        </a>
-      </li>
-      <li>
-        <a href="https://bignovadev.github.io/Coin-Clicker/" target="_blank" class="exotic-link">
-          🪙 Coin Clicker 📈
-          <br>
-          <img class="Thumbnail" src="https://i.imgur.com/5hE3mhH.png" alt="Thumbnail">
-        </a>
-      </li>
-      <li>
-        <a href="https://bignovadev.github.io/Crop-Aphasia/" target="_blank" class="exotic-link">
-          🪴 Crop Aphasia 🥕
-          <br>
-          <img class="Thumbnail" src="https://i.imgur.com/OnvZrDq.png" alt="Thumbnail">
+      <li class="project-item">
+        <a href="project-two.html" class="exotic-link">
+          <img src="project-thumb2.png" alt="Project 2" class="Thumbnail" />
+          <p>Project Two</p>
         </a>
       </li>
     </ul>
   </section>
 
+  <!-- About Section -->
   <section id="about" class="section">
-    <h2>About</h2>
-    <p class="Text">BigNova_Dev Productions is a creative development studio focused on
-    <br>
-    crafting immersive games, apps, and digital experiences that blend art and
-    <br>
-    technology. Our team is driven by curiosity and guided by a passion for
-    <br>
-    pushing boundaries through design, storytelling, and code. We deliver
-    <br>
-    high-performance projects backed by technical expertise and thoughtful
-    <br>
-    collaboration, from intuitive user interfaces to scalable multiplayer systems.
-    <br>
-    As creators, problem-solvers, and strategists, we build with purpose—
-    <br>
-    committed to ethical innovation and user-centered design. With a growing
-    <br>
-    community and strong partnerships, BigNova_Dev continues to evolve as a
-    <br>
-    studio shaping the future of interactive experiences.</p>
+    <h2>About Us</h2>
+    <p class="Text">
+      BigNova_Dev is a cosmic game dev collective focused on creating vibrant and immersive web experiences. Powered by passion, innovation, and good vibes.
+    </p>
   </section>
 
-  <section id="team" class="section">
-    <h2>Meet the Team</h2>
-    <p class="Text">We never imagined we’d come this far. It started as a guy and his friends just
-    <br>
-    messing around that began as a small project and became a creation. A few ideas
-    <br>
-    shared between passionate minds has grown into a vibrant constellation of
-    <br>
-    support, creativity, and connection. Every step forward, every game launched, every
-    <br>
-    sleepless night. It's all been made worthwhile because of you. This community has
-    <br>
-    not only lifted us up, it’s reminded us why we started in the first place: to create
-    <br>
-    something that matters. Your belief, your feedback, your presence it’s the meaning
-    <br>
-    behind BigNova_Dev Productions. We’re endlessly grateful, and we carry that
-    <br>
-    gratitude into every game we create.</p>
-    <h4 class="Text">@BigNova_Dev - Owner</h4>
-    <h4 class="Text">@SuperPotassium - Manager</h4>
-    <h4 class="Text">@Violin - Tester</h4>
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Join Us</h2>
+    <a href="https://discord.gg/your-server" class="discord-link">Join Our Discord</a>
   </section>
 
-  <section id="community" class="section">
-    <h2>Our Community</h2>
-    <a href="https://discord.gg/fRNnpCKe" class="discord-link" target="_blank">Discord Community</a>
-  </section>
-
+  <!-- Footer -->
   <footer>
-    <p>© 2025 BigNova_Dev Productions. All rights reserved.</p>
+    <p>&copy; 2025 BigNova_Dev Productions. All rights reserved.</p>
   </footer>
+
+  <script>
+  window.addEventListener("load", () => {
+    const splash = document.querySelector(".splash-screen");
+    splash.style.opacity = "1";
+
+    setTimeout(() => {
+      splash.style.transition = "opacity 1s ease";
+      splash.style.opacity = "0";
+    }, 2500);
+
+    // Optional: Completely remove from DOM after fade
+    setTimeout(() => {
+      splash.style.display = "none";
+    }, 3500);
+  });
+</script>
 </body>
 </html>
