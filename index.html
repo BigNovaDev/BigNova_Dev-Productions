@@ -9,19 +9,17 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
       background-color: #f9f9f9;
       color: #333;
       user-select: none;
     }
 
     .navbar {
-      background-color: #1e1e2f;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column;
+      text-align: center;
     }
+
 
     .navbar-title {
       flex: 1;
@@ -32,11 +30,17 @@
       margin: 0;
     }
 
+    .navbar-title:hover {
+      color: #b6c0ff;
+      transition: color 0.3s ease-in-out;
+    }
+
     .logo {
       height: 75px;
-      border-radius: 5px;
-      box-shadow: 0px 0px 10px rgb(0,0,0);
+      border-radius: 10px;
+      box-shadow: 0 0 10px #555;
     }
+
 
     .nav-links {
       list-style: none;
