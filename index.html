@@ -7,148 +7,163 @@
   <title>BigNova_Dev Productions</title>
   <meta name="description" content="BigNova_Dev Productions - Cosmic-themed games, apps, and experiences crafted by a creative team.">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-      user-select: none;
-    }
+    /* === Reset & Base Styling === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .navbar {
-      flex-direction: column;
-      text-align: center;
-    }
+body {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #0a0a0f;
+  color: #eaeaea;
+  line-height: 1.6;
+  user-select: none;
+}
 
+/* === Navbar === */
+.navbar {
+  background: linear-gradient(135deg, #111325, #191c3f);
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
 
-    .navbar-title {
-      flex: 1;
-      text-align: center;
-      font-size: 32px;
-      font-weight: bold;
-      color: white;
-      margin: 0;
-    }
+.navbar-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+  transition: color 0.3s ease-in-out;
+}
 
-    .navbar-title:hover {
-      color: #b6c0ff;
-      transition: color 0.3s ease-in-out;
-    }
+.navbar-title:hover {
+  color: #7db4ff;
+}
 
-    .logo {
-      height: 75px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #555;
-    }
+.logo {
+  height: 80px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #4c5a9f;
+}
 
+/* === Navigation Links === */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
 
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
+.nav-links a {
+  text-decoration: none;
+  color: #cddaff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
 
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.nav-links a:hover {
+  color: #ffffff;
+}
 
-    .cta-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: white;
-      color: #009ffd;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+/* === Section Styling === */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom, #111325, #161934);
+  box-shadow: inset 0 1px 0 #333;
+}
 
-    .section {
-      background: linear-gradient(to right, rgb(10,10,10), rgb(25,25,25));
-      color: rgb(255,255,255);
-      padding: 60px 30px;
-      text-align: center;
-    }
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
 
-    .project-grid {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto;
-      max-width: 750px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      justify-content: center;
-      font-size: 25px;
-    }
+.Text {
+  color: #b5b5b5;
+  max-width: 900px;
+  margin: auto;
+  font-size: 18px;
+}
 
-    @media (max-width: 600px) {
-      .project-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+/* === Project Grid === */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  list-style: none;
+}
 
-    .Thumbnail {
-      height: 150px;
-      width: auto;
-      margin-top: 10%;
-      border: solid 2.5px rgb(255,255,255);
-      border-radius: 10px;
-      box-shadow: 0px 0px 5px rgb(255,255,255);
-    }
+.Thumbnail {
+  height: 150px;
+  border-radius: 10px;
+  border: 2px solid #7db4ff;
+  box-shadow: 0 0 8px #7db4ff;
+  margin-top: 12px;
+}
 
-    .exotic-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      font-weight: 600;
-      padding: 16px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(25,25,25,0.75), rgba(50,50,50,.75));
-      box-shadow: inset 0 -3px 0 rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.15);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-align: center;
-    }
+/* === Card Links === */
+.exotic-link {
+  background: rgba(255, 255, 255, 0.05);
+  color: #cddaff;
+  padding: 20px;
+  border-radius: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-    .exotic-link:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-      background: linear-gradient(135deg, rgb(25,25,25), rgb(50,50,50));
-    }
+.exotic-link:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1e1e2f;
-      color: white;
-    }
-    
-    .discord-link {
-      width: 200px;               /* Adjust as needed for the box width */
-      margin: 0 auto;             /* Center it horizontally */
-      display: block;
-      text-decoration: none;
-      color: rgb(75,100,255);
-      font-weight: 600;
-      padding: 16px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(25,25,25,0.75), rgba(50,50,50,.75));
-      box-shadow: inset 0 -3px 0 rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.15);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-align: center;
-    }
+/* === Footer === */
+footer {
+  background-color: #090a1c;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
 
-    .discord-link:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-      background: linear-gradient(135deg, rgb(25,25,25), rgb(50,50,50));
-    }
-    
-    .Text {
-      color: rgba(255,255,255,0.5);
-    }
+/* === Discord Link === */
+.discord-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #0f0f1f, #2a2c64);
+  color: #7db4ff;
+  font-weight: bold;
+  padding: 16px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.discord-link:hover {
+  background: #3f43a8;
+  color: #ffffff;
+}
+
+/* === Responsive Tweak === */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
   </style>
 </head>
 <body oncontextmenu="return false">
