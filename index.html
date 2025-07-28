@@ -8,142 +8,103 @@
   <meta name="description" content="BigNova_Dev Productions - Cosmic-themed games, apps, and experiences crafted by a creative team.">
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
+  line-height: 1.6;
+}
 
-    .navbar {
-      background-color: #1e1e2f;
-      padding: 15px 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+h2, h4 {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 40px;
+}
 
-    .navbar-title {
-      flex: 1;
-      text-align: center;
-      font-size: 32px;
-      font-weight: bold;
-      color: white;
-      margin: 0;
-    }
+.section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #111;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
 
-    .logo {
-      height: 75px;
-      border-radius: 5px;
-      box-shadow: 0px 0px 10px rgb(0,0,0);
-    }
+.Text {
+  text-align: center;
+  padding: 0 15px;
+  color: #ccc;
+}
 
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+}
 
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+li {
+  background: #1a1a1a;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .cta-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: white;
-      color: #009ffd;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffff88;
+}
 
-    .section {
-      background: linear-gradient(to right, rgb(10,10,10), rgb(25,25,25));
-      color: rgb(255,255,255);
-      padding: 60px 30px;
-      text-align: center;
-    }
+.Thumbnail {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
 
-    .project-grid {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto;
-      max-width: 750px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      justify-content: center;
-      font-size: 25px;
-    }
+.exotic-link {
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: bold;
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+}
 
-    @media (max-width: 600px) {
-      .project-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+.exotic-link:hover {
+  color: #ff00ff;
+}
 
-    .Thumbnail {
-      height: 150px;
-      width: auto;
-      margin-top: 10%;
-      border: solid 2.5px rgb(255,255,255);
-      border-radius: 10px;
-      box-shadow: 0px 0px 5px rgb(255,255,255);
-    }
+.discord-link {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background: #5865F2;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  width: fit-content;
+  box-shadow: 0 0 10px #5865F288;
+  transition: background 0.3s ease;
+}
 
-    .exotic-link {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      font-weight: 600;
-      padding: 16px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(25,25,25,0.75), rgba(50,50,50,.75));
-      box-shadow: inset 0 -3px 0 rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.15);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-align: center;
-    }
+.discord-link:hover {
+  background: #4a55d4;
+}
 
-    .exotic-link:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-      background: linear-gradient(135deg, rgb(25,25,25), rgb(50,50,50));
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1e1e2f;
-      color: white;
-    }
-    
-    .discord-link {
-      width: 200px;               /* Adjust as needed for the box width */
-      margin: 0 auto;             /* Center it horizontally */
-      display: block;
-      text-decoration: none;
-      color: rgb(75,100,255);
-      font-weight: 600;
-      padding: 16px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, rgba(25,25,25,0.75), rgba(50,50,50,.75));
-      box-shadow: inset 0 -3px 0 rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.15);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      text-align: center;
-    }
-
-    .discord-link:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
-      background: linear-gradient(135deg, rgb(25,25,25), rgb(50,50,50));
-    }
-    
-    .Text {
-      color: rgba(255,255,255,0.5);
-    }
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+  font-size: 0.9rem;
+  background: #111;
+  border-top: 1px solid #333;
+}
   </style>
 </head>
 <body>
