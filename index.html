@@ -7,136 +7,108 @@
   <link rel="icon" href="https://i.imgur.com/e4oXN9E.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #00ffff;
-      --accent: #ff00ff;
-      --bg-dark: #101820;
-      --bg-section: #1a1f2b;
-      --text-light: #f0f0f0;
-      --text-muted: #cccccc;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg-dark);
-      color: var(--text-light);
-      line-height: 1.6;
-    }
-    header {
-      background: #0f2027;
-      padding: 30px;
-      text-align: center;
-      border-bottom: 1px solid #2c5364;
-    }
-    header img.logo {
-      width: 64px;
-      border-radius: 50%;
-    }
-    header h1 {
-      margin-top: 12px;
-      font-size: 2.2rem;
-      font-weight: 600;
-    }
-    nav ul {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      margin-top: 20px;
-      list-style: none;
-    }
-    nav a {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: var(--accent);
-    }
-    .section {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 30px;
-      background: var(--bg-section);
-      border-radius: 12px;
-      box-shadow: 0 0 30px rgba(0,255,255,0.05);
-    }
-    .section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .Text {
-      text-align: center;
-      color: var(--text-muted);
-    }
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-      margin-top: 30px;
-      list-style: none;
-      padding: 0;
-    }
-    .project-grid li {
-      background: #222;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .project-grid li:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 12px var(--primary);
-    }
-    .Thumbnail {
-      width: 100%;
-      max-width: 140px;
-      margin: 10px auto;
-      border-radius: 8px;
-    }
-    .exotic-link {
-      display: block;
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-    .exotic-link:hover {
-      color: var(--accent);
-    }
-    .discord-link {
-      display: inline-block;
-      margin: 20px auto;
-      padding: 12px 24px;
-      background-color: #5865F2;
-      color: #fff;
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 0 10px rgba(88,101,242,0.3);
-      transition: background 0.3s ease;
-    }
-    .discord-link:hover {
-      background-color: #4754d3;
-    }
-    h4 {
-      text-align: center;
-      margin-top: 10px;
-      font-weight: 600;
-    }
-    footer {
-      background: #0f2027;
-      text-align: center;
-      padding: 20px;
-      color: #888;
-      font-size: 0.9rem;
-      border-top: 1px solid #333;
-    }
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background: radial-gradient(circle at top left, #1e1e2f, #0f2027);
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+h2, h4 {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 40px;
+  color: #ffffff;
+}
+
+.section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(20, 20, 30, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+.Text {
+  text-align: center;
+  padding: 0 20px;
+  color: #bbbbbb;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #26283a;
+  border: 1px solid #00ffff22;
+  border-radius: 12px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffff99;
+}
+
+.Thumbnail {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.exotic-link {
+  text-decoration: none;
+  color: #00ffff;
+  font-weight: bold;
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.exotic-link:hover {
+  color: #ff00ff;
+}
+
+.discord-link {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #5865F2, #4754d3);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  width: fit-content;
+  box-shadow: 0 0 12px rgba(88, 101, 242, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.discord-link:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+  font-size: 0.9rem;
+  background: #0f2027;
+  border-top: 1px solid #333;
+}
   </style>
 </head>
 <body>
