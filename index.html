@@ -4,116 +4,145 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BigNova_Dev Productions</title>
-  <link rel="icon" href="https://i.imgur.com/e4oXN9E.png" type="image/png">
+  <link rel="icon" href="https://i.imgur.com/e4oXN9E.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #00ffee;
+      --accent: #ff44dd;
+      --bg-main: #0a0f1a;
+      --bg-card: #151c2b;
+      --text-main: #e2e2e2;
+      --text-muted: #999;
+    }
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+    }
     body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
-  background: radial-gradient(circle at top left, #1e1e2f, #0f2027);
-  color: #e0e0e0;
-  line-height: 1.6;
-}
-
-h2, h4 {
-  font-weight: 600;
-  text-align: center;
-  margin-top: 40px;
-  color: #ffffff;
-}
-
-.section {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 30px;
-  background: rgba(20, 20, 30, 0.9);
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.15);
-  backdrop-filter: blur(4px);
-}
-
-.Text {
-  text-align: center;
-  padding: 0 20px;
-  color: #bbbbbb;
-}
-
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  background: #26283a;
-  border: 1px solid #00ffff22;
-  border-radius: 12px;
-  padding: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-li:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #00ffff99;
-}
-
-.Thumbnail {
-  width: 120px;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-.exotic-link {
-  text-decoration: none;
-  color: #00ffff;
-  font-weight: bold;
-  font-size: 1rem;
-  display: block;
-  text-align: center;
-  transition: color 0.3s ease;
-}
-
-.exotic-link:hover {
-  color: #ff00ff;
-}
-
-.discord-link {
-  display: block;
-  text-align: center;
-  margin: 20px auto;
-  padding: 12px 24px;
-  background: linear-gradient(90deg, #5865F2, #4754d3);
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 10px;
-  width: fit-content;
-  box-shadow: 0 0 12px rgba(88, 101, 242, 0.4);
-  transition: transform 0.3s ease;
-}
-
-.discord-link:hover {
-  transform: scale(1.05);
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #aaa;
-  font-size: 0.9rem;
-  background: #0f2027;
-  border-top: 1px solid #333;
-}
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+    header {
+      padding: 30px;
+      text-align: center;
+      border-bottom: 1px solid #222;
+    }
+    header img {
+      width: 64px;
+      border-radius: 50%;
+    }
+    header h1 {
+      margin-top: 10px;
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      list-style: none;
+    }
+    nav a {
+      color: var(--text-main);
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    .section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 30px;
+      background: var(--bg-card);
+      border-radius: 14px;
+      box-shadow: 0 0 20px rgba(0, 255, 238, 0.06);
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--primary);
+    }
+    .Text {
+      text-align: center;
+      color: var(--text-muted);
+      padding: 0 20px;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+      list-style: none;
+      padding: 0;
+    }
+    .project-grid li {
+      background: #1c263b;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.05);
+    }
+    .project-grid li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+    }
+    .Thumbnail {
+      width: 100%;
+      max-width: 140px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    .exotic-link {
+      display: block;
+      font-weight: bold;
+      text-decoration: none;
+      color: var(--primary);
+      margin-top: 10px;
+    }
+    .exotic-link:hover {
+      color: var(--accent);
+    }
+    .discord-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 28px;
+      background: linear-gradient(to right, #5865F2, #4754d3);
+      color: #fff;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 10px rgba(88,101,242,0.4);
+    }
+    .discord-link:hover {
+      transform: scale(1.05);
+    }
+    h4 {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #222;
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://i.imgur.com/e4oXN9E.png" alt="BigNova_Dev Logo" class="logo" />
+    <img src="https://i.imgur.com/e4oXN9E.png" alt="Logo" />
     <h1>BigNova_Dev Productions</h1>
     <nav>
       <ul>
@@ -129,44 +158,44 @@ footer {
     <h2>Games</h2>
     <ul class="project-grid">
       <li>
-        <a href="https://bignovadev.github.io/Rock-Paper-Scissors/" target="_blank" class="exotic-link">🪨 Rock Paper Scissors ✂️<br>
-        <img class="Thumbnail" src="https://i.imgur.com/vjemEAl.png" alt="Thumbnail"></a>
+        <a class="exotic-link" href="https://bignovadev.github.io/Rock-Paper-Scissors/" target="_blank">🪨 Rock Paper Scissors ✂️<br>
+        <img class="Thumbnail" src="https://i.imgur.com/vjemEAl.png" alt="Game Thumbnail"></a>
       </li>
       <li>
-        <a href="https://bignovadev.github.io/Infinite-Wordle/" target="_blank" class="exotic-link">♾️ Infinite Wordle 🔠<br>
-        <img class="Thumbnail" src="https://i.imgur.com/UFdG8wY.png" alt="Thumbnail"></a>
+        <a class="exotic-link" href="https://bignovadev.github.io/Infinite-Wordle/" target="_blank">♾️ Infinite Wordle 🔠<br>
+        <img class="Thumbnail" src="https://i.imgur.com/UFdG8wY.png" alt="Game Thumbnail"></a>
       </li>
       <li>
-        <a href="https://bignovadev.github.io/Coin-Clicker/" target="_blank" class="exotic-link">🪙 Coin Clicker 🖱️<br>
-        <img class="Thumbnail" src="https://i.imgur.com/GBWYqou.png" alt="Thumbnail"></a>
+        <a class="exotic-link" href="https://bignovadev.github.io/Coin-Clicker/" target="_blank">🪙 Coin Clicker 🖱️<br>
+        <img class="Thumbnail" src="https://i.imgur.com/GBWYqou.png" alt="Game Thumbnail"></a>
       </li>
       <li>
-        <a href="https://bignovadev.github.io/Crop-Aphasia/" target="_blank" class="exotic-link">🚜 Crop Aphasia 🥕<br>
-        <img class="Thumbnail" src="https://i.imgur.com/JNAQ6TD.png" alt="Thumbnail"></a>
+        <a class="exotic-link" href="https://bignovadev.github.io/Crop-Aphasia/" target="_blank">🚜 Crop Aphasia 🥕<br>
+        <img class="Thumbnail" src="https://i.imgur.com/JNAQ6TD.png" alt="Game Thumbnail"></a>
       </li>
     </ul>
   </section>
 
   <section id="about" class="section">
     <h2>About</h2>
-    <p class="Text">BigNova_Dev Productions is a creative development studio focused on crafting immersive games, apps, and digital experiences that blend art and technology. Our team is driven by curiosity and guided by a passion for pushing boundaries through design, storytelling, and code. We deliver high-performance projects backed by technical expertise and thoughtful collaboration, from intuitive user interfaces to scalable multiplayer systems. As creators, problem-solvers, and strategists, we build with purpose — committed to ethical innovation and user-centered design.</p>
+    <p class="Text">BigNova_Dev Productions is a creative dev studio crafting immersive games and experiences with passion, precision, and community. From intuitive UI to multiplayer engines, we blend design and tech to deliver digital magic.</p>
   </section>
 
   <section id="team" class="section">
-    <h2>Meet the Team</h2>
-    <p class="Text">It all started with a guy and his friends chasing an idea — what began as a playful side project has become a community-driven studio. Every game launched, every sleepless night, every spark of imagination is thanks to the people who support us. Your feedback, presence, and belief give BigNova_Dev Productions its purpose.</p>
-    <h4>@BigNova_Dev - Owner</h4>
-    <h4>@SuperPotassium - Manager</h4>
-    <h4>@Violin - Tester</h4>
+    <h2>Team</h2>
+    <p class="Text">What began with a few friends and an idea has grown into a vibrant network of creators, problem-solvers, and dreamers. Every game we launch is a story shaped by the people behind it — and the ones who play it.</p>
+    <h4>@BigNova_Dev — Owner</h4>
+    <h4>@SuperPotassium — Manager</h4>
+    <h4>@Violin — Tester</h4>
   </section>
 
   <section id="community" class="section">
-    <h2>Our Community</h2>
-    <a href="https://discord.gg/fRNnpCKe" class="discord-link" target="_blank">Join us on Discord</a>
+    <h2>Community</h2>
+    <a href="https://discord.gg/fRNnpCKe" class="discord-link" target="_blank">Join our Discord</a>
   </section>
 
   <footer>
-    <p>© 2025 BigNova_Dev Productions. All rights reserved.</p>
+    © 2025 BigNova_Dev Productions. All rights reserved.
   </footer>
 </body>
 </html>
