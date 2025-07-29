@@ -12,6 +12,10 @@
       font-family: 'Segoe UI', sans-serif;
       background-color: #f9f9f9;
       color: #333;
+      -webkit-tap-highlight-color: transparent;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
 
     .navbar {
@@ -146,7 +150,7 @@
     }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false">
   <header class="navbar">
     <div class="logo-text">
       <img src="https://i.imgur.com/e4oXN9E.png" alt="BigNova_Dev Logo" class="logo" />
